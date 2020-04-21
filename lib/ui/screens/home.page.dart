@@ -1,4 +1,5 @@
 import 'package:app_multiple_layouts_and_animations/ui/screens/animations/animation-sample.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/bank-account/bank-account.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/crypto-wallet.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
@@ -52,6 +53,10 @@ class HomePage extends StatelessWidget {
                 context: context,
                 text: 'Crypto Wallet',
                 builder: (_) => CryptoWalletPage()),
+            _listTile(
+                context: context,
+                text: 'Bank Account',
+                builder: (_) => BankAccountPage()),
           ],
         ),
       ),
