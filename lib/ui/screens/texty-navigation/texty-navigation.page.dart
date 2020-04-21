@@ -48,8 +48,7 @@ Widget _makeProfileAvatar() {
       // SizedBox(height: 10.0),
       CircleAvatar(
         radius: 60.0,
-        backgroundImage: NetworkImage(
-            'https://res.cloudinary.com/app-beleza-da-mulher/image/upload/v1586527724/user_avatar/5_1586527722789.jpg'),
+        backgroundImage: AssetImage('assets/avatar.jpg'),
       ),
       SizedBox(height: 20.0),
       Center(

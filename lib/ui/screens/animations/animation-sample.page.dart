@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
 class AnimationSamplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final headerStyle = Theme.of(context).textTheme.title;
+    final headerStyle = Theme.of(context).textTheme.headline6;
     return Scaffold(
       appBar: AppBar(
         title: Text('Animation Samples'),

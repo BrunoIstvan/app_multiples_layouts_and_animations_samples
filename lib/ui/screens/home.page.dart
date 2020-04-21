@@ -1,5 +1,7 @@
 import 'package:app_multiple_layouts_and_animations/ui/screens/animations/animation-sample.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/crypto-wallet.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +24,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(height: 10),
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage: NetworkImage(
-                        'https://res.cloudinary.com/app-beleza-da-mulher/image/upload/v1586527724/user_avatar/5_1586527722789.jpg'),
+                    backgroundImage: AssetImage('assets/avatar.jpg'),
                   ),
                 ],
               ),
@@ -43,6 +44,14 @@ class HomePage extends StatelessWidget {
                 context: context,
                 text: 'Texty Navigator',
                 builder: (_) => TextyNavigationPage()),
+            _listTile(
+                context: context,
+                text: 'Succesful Purchase',
+                builder: (_) => SuccesfulPurchasePage()),
+            _listTile(
+                context: context,
+                text: 'Crypto Wallet',
+                builder: (_) => CryptoWalletPage()),
           ],
         ),
       ),
