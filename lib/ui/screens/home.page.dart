@@ -4,6 +4,7 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/beatiful-list/bea
 import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/crypto-wallet.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboard.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/login-sample/login-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/walkthrougth/welcome.page.dart';
@@ -36,6 +37,10 @@ class HomePage extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
+            _listTile(
+                context: context,
+                text: 'Login Sample 1',
+                builder: (_) => LoginSamplePage()),
             _listTile(
                 context: context,
                 text: 'Layout Section Page',
