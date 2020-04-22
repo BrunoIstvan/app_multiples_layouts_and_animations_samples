@@ -1,6 +1,8 @@
 import 'package:app_multiple_layouts_and_animations/ui/screens/animations/animation-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/bank-account/bank-account.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/beatiful-list/beautiful-list.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/crypto-wallet.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboard.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
@@ -62,6 +64,14 @@ class HomePage extends StatelessWidget {
                 context: context,
                 text: 'Walkthrough',
                 builder: (_) => WelcomePage()),
+            _listTile(
+                context: context,
+                text: 'Dashboard',
+                builder: (_) => DashboardPage()),
+            _listTile(
+                context: context,
+                text: 'Beautiful List',
+                builder: (_) => BeautifulListPage(title: 'Lessons')),
           ],
         ),
       ),

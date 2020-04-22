@@ -21,14 +21,12 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text('Walkthrougth'),
-      ),
-      body: Stack(
+      appBar: _buildAppBar(context),
+      body: _buildBody(context),
+    );
+  }
+
+  Widget _buildBody(BuildContext context) => Stack(
         children: <Widget>[
           PageView(
             children: <Widget>[
@@ -61,7 +59,13 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           )
         ],
-      ),
-    );
-  }
+      );
+
+  Widget _buildAppBar(BuildContext context) => AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: Text('Walkthrougth'),
+      );
 }
