@@ -4,6 +4,7 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/cry
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/walkthrougth/welcome.page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -57,6 +58,10 @@ class HomePage extends StatelessWidget {
                 context: context,
                 text: 'Bank Account',
                 builder: (_) => BankAccountPage()),
+            _listTile(
+                context: context,
+                text: 'Walkthrough',
+                builder: (_) => WelcomePage()),
           ],
         ),
       ),
