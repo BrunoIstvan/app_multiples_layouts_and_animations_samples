@@ -7,6 +7,7 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboa
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/login-sample/login-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/tabview/tabview.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/walkthrougth/welcome.page.dart';
 import 'package:flutter/material.dart';
@@ -82,6 +83,10 @@ class HomePage extends StatelessWidget {
                 context: context,
                 text: 'Cuisine',
                 builder: (_) => CuisinePage()),
+            _listTile(
+                context: context,
+                text: 'TabView',
+                builder: (_) => TabViewPage()),
           ],
         ),
       ),
