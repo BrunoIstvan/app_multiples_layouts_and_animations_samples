@@ -1,4 +1,4 @@
-package com.example.app_multiple_layouts_and_animations
+package br.com.bicmsystems.app_multiple_layouts_and_animations
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

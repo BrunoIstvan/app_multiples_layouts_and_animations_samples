@@ -7,7 +7,11 @@ class LayoutSectionPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Layout Section Page'),
+        title: Text("Layout Section Page"),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: ListView(
         children: <Widget>[

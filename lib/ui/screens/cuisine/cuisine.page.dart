@@ -146,7 +146,12 @@ class _CuisinePageState extends State<CuisinePage> {
               icon: Icon(fi['fv'] ? Icons.favorite : Icons.favorite_border),
               onPressed: () => setState(() => fi['fv'] = !fi['fv']),
             ),
-            IconButton(icon: Icon(Icons.share), onPressed: () {})
+            IconButton(
+              icon: Icon(Icons.share),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
           ],
         ),
       ),

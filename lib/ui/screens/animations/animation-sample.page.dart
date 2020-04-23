@@ -24,7 +24,11 @@ class AnimationSamplePage extends StatelessWidget {
     final headerStyle = Theme.of(context).textTheme.headline6;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Animation Samples'),
+        title: Text("Animation Samples"),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: ListView(
         children: [

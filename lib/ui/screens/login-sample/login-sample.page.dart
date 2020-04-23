@@ -20,13 +20,6 @@ class _LoginSamplePageState extends State<LoginSamplePage> {
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Login Sample"),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
@@ -44,7 +37,7 @@ class _LoginSamplePageState extends State<LoginSamplePage> {
 
   Widget _buildPageTitle() {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: EdgeInsets.only(top: 35),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -248,10 +241,17 @@ class _LoginSamplePageState extends State<LoginSamplePage> {
                         color: Color(0xFF4B9DFE),
                         textColor: Colors.white,
                         padding: EdgeInsets.only(
-                            left: 38, right: 38, top: 15, bottom: 15),
+                          left: 38,
+                          right: 38,
+                          top: 15,
+                          bottom: 15,
+                        ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        onPressed: () {},
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                       )
                     ],
                   )

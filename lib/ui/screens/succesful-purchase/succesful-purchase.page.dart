@@ -16,6 +16,7 @@ class _SuccesfulPurchasePageState extends State<SuccesfulPurchasePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          title: Text('Succesful Purchase'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context),
