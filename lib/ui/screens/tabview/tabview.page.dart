@@ -27,32 +27,48 @@ class _TabViewPageState extends State<TabViewPage>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Pages"),
-        backgroundColor: Colors.deepOrange,
-        bottom: new TabBar(
-          controller: controller,
-          tabs: <Tab>[
-            new Tab(icon: new Icon(Icons.arrow_forward)),
-            new Tab(icon: new Icon(Icons.arrow_downward)),
-            new Tab(icon: new Icon(Icons.arrow_back))
-          ],
-        ),
-      ),
-      bottomNavigationBar: new Material(
-        color: Colors.deepOrange,
-        child: new TabBar(
-          controller: controller,
-          tabs: <Tab>[
-            new Tab(icon: new Icon(Icons.arrow_forward)),
-            new Tab(icon: new Icon(Icons.arrow_downward)),
-            new Tab(icon: new Icon(Icons.arrow_back))
-          ],
-        ),
-      ),
-      body: new TabBarView(
+      appBar: _buildAppBar(context),
+      bottomNavigationBar: _buildBottomNavigationBar(),
+      body: _buildBody(),
+    );
+  }
+
+  TabBarView _buildBody() {
+    return new TabBarView(
+      controller: controller,
+      children: <Widget>[FirstPage(), SecondPage(), ThirdPage()],
+    );
+  }
+
+  Material _buildBottomNavigationBar() {
+    return new Material(
+      color: Colors.deepOrange,
+      child: new TabBar(
         controller: controller,
-        children: <Widget>[FirstPage(), SecondPage(), ThirdPage()],
+        tabs: <Tab>[
+          new Tab(icon: new Icon(Icons.arrow_forward)),
+          new Tab(icon: new Icon(Icons.arrow_downward)),
+          new Tab(icon: new Icon(Icons.arrow_back))
+        ],
+      ),
+    );
+  }
+
+  AppBar _buildAppBar(BuildContext context) {
+    return new AppBar(
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        onPressed: () => Navigator.pop(context),
+      ),
+      title: new Text("Pages"),
+      backgroundColor: Colors.deepOrange,
+      bottom: new TabBar(
+        controller: controller,
+        tabs: <Tab>[
+          new Tab(icon: new Icon(Icons.arrow_forward)),
+          new Tab(icon: new Icon(Icons.arrow_downward)),
+          new Tab(icon: new Icon(Icons.arrow_back))
+        ],
       ),
     );
   }
