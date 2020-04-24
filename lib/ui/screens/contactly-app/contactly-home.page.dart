@@ -1,4 +1,5 @@
 import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/contac-list.model.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/contact-detail.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/contact.model.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/contactly-app-constants.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/contactly.service.dart';
@@ -198,7 +199,14 @@ class _ContactlyHomePageState extends State<ContactlyHomePage> {
             color: Colors.white,
             size: 30.0,
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => new ContactDetailPage(record: record),
+              ),
+            );
+          },
         ),
       ),
     );
