@@ -18,7 +18,7 @@ class _RichListItemCardState extends State<RichListItemCard> {
 
   String renderUrl;
 
-  Widget get itemImage {
+  Widget get _itemImage {
     return Container(
       width: 125.0,
       height: 125.0,
@@ -33,11 +33,11 @@ class _RichListItemCardState extends State<RichListItemCard> {
     );
   }
 
-  Widget get listItemCard {
+  Widget get _listItemCard {
     return Padding(
       padding: EdgeInsets.only(top: 18, bottom: 16),
       child: Container(
-        constraints: BoxConstraints(minWidth: 300),
+        constraints: BoxConstraints(minWidth: 340),
         height: 130.0,
         child: Card(
           elevation: 0.0,
@@ -85,9 +85,9 @@ class _RichListItemCardState extends State<RichListItemCard> {
           children: <Widget>[
             Positioned(
               left: 45.0,
-              child: listItemCard,
+              child: _listItemCard,
             ),
-            Positioned(top: 20.5, child: itemImage),
+            Positioned(top: 20.5, child: _itemImage),
           ],
         ),
       ),
