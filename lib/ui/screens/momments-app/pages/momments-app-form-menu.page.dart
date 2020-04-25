@@ -8,17 +8,17 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/util
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class MommentsAppFormMainPage extends StatefulWidget {
+class MommentsAppFormMenuPage extends StatefulWidget {
   final MainModel model;
 
-  MommentsAppFormMainPage(this.model);
+  MommentsAppFormMenuPage(this.model);
 
   @override
-  _MommentsAppFormMainPageState createState() =>
-      _MommentsAppFormMainPageState();
+  _MommentsAppFormMenuPageState createState() =>
+      _MommentsAppFormMenuPageState();
 }
 
-class _MommentsAppFormMainPageState extends State<MommentsAppFormMainPage> {
+class _MommentsAppFormMenuPageState extends State<MommentsAppFormMenuPage> {
   MenuItem selectedMenuItem = MenuItem.form;
 
   List<Widget> _buildMenuItems(MainModel model) {

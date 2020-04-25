@@ -1,5 +1,5 @@
 import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/models/main.model.dart';
-import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/pages/momments-app-form-main.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/pages/momments-app-form-menu.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/utils/momments-app-buttons.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/utils/momments-app-colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -110,9 +110,9 @@ class _MommentsAppHomePageState extends State<MommentsAppHomePage> {
     void _goToHomePage() {
       Navigator.push(
         context,
-        PageTransition<MommentsAppFormMainPage>(
+        PageTransition<MommentsAppFormMenuPage>(
           type: PageTransitionType.downToUp,
-          child: MommentsAppFormMainPage(_model),
+          child: MommentsAppFormMenuPage(_model),
         ),
       );
     }
