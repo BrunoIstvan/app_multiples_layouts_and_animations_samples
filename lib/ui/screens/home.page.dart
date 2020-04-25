@@ -8,11 +8,14 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboa
 import 'package:app_multiple_layouts_and_animations/ui/screens/friendly-chat/friendly-chat.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/horizontal-list-tab/horizontal-list-tab.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/list-refresh/refresh-list.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/login-sample/login-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/momments-app-main.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/tabview/tabview.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/themes/custom-theme-home.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/themes/themes.const.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/walkthrougth/welcome.page.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +31,14 @@ class _HomePageState extends State<HomePage> {
   String otherProfilePicture =
       "https://randomuser.me/api/portraits/women/47.jpg";
 
+  final GlobalKey<ScaffoldState> _scaffoldState =
+      new GlobalKey<ScaffoldState>();
+
+  void _showBar() {
+    Scaffold.of(context)
+        .showSnackBar(new SnackBar(content: new Text('Hello World')));
+  }
+
   _switchUser() {
     String backupString = mainProfilePicture;
     this.setState(() {
@@ -39,6 +50,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldState,
       appBar: AppBar(title: Text('Flutter Demo')),
       drawer: Drawer(
         child: ListView(
@@ -87,8 +99,18 @@ class _HomePageState extends State<HomePage> {
             ),
             _listTile(
               context: context,
+              text: 'Refresh List',
+              builder: (_) => RefreshListPage(),
+            ),
+            _listTile(
+              context: context,
               text: 'Friendly Chat',
               builder: (_) => FriendlyChatPage(),
+            ),
+            _listTile(
+              context: context,
+              text: 'Custom Theme',
+              builder: (_) => CustomThemeHomePage(themeKey: MyThemeKeys.LIGHT),
             ),
             _listTile(
               context: context,
@@ -133,28 +155,47 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      persistentFooterButtons: <Widget>[
+        new IconButton(icon: new Icon(Icons.timer), onPressed: _showBottom),
+        new IconButton(icon: new Icon(Icons.people), onPressed: () => _showBar),
+        new IconButton(
+            icon: new Icon(Icons.map), onPressed: () => print('Button3')),
+      ],
     );
   }
 
-  // DrawerHeader _buildDrawerHeader() {
-  //   return DrawerHeader(
-  //     child: Column(
-  //       mainAxisAlignment: MainAxisAlignment.start,
-  //       crossAxisAlignment: CrossAxisAlignment.start,
-  //       children: <Widget>[
-  //         Text('Drawer Header'),
-  //         SizedBox(height: 10),
-  //         CircleAvatar(
-  //           radius: 40,
-  //           backgroundImage: AssetImage('assets/avatar.jpg'),
-  //         ),
-  //       ],
-  //     ),
-  //     decoration: BoxDecoration(
-  //       color: Colors.blue,
-  //     ),
-  //   );
-  // }
+  void _showBottom() {
+    showModalBottomSheet<void>(
+      context: context,
+      /*bottom sheet is like a drawer that pops off where you can put any
+      controls you want, it is used typically for user notifications*/
+      //builder lets your code generate the code
+      builder: (BuildContext context) {
+        return new Container(
+          padding: new EdgeInsets.all(15.0),
+          child: new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text(
+                'Some info here',
+                style: new TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              new FlatButton(
+                onPressed: () => Navigator.pop(context),
+                child: new Text('Close'),
+              )
+            ],
+          ),
+        );
+      },
+    );
+  }
 
   UserAccountsDrawerHeader _buildUserAccountsDrawerHeader() =>
       UserAccountsDrawerHeader(
