@@ -5,6 +5,8 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/con
 import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/crypto-wallet.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/cuisine/cuisine.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboard.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/friendly-chat/friendly-chat.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/horizontal-list-tab/horizontal-list-tab.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/login-sample/login-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/momments-app-main.page.dart';
@@ -75,8 +77,18 @@ class _HomePageState extends State<HomePage> {
             ),
             _listTile(
               context: context,
+              text: 'Horizontal List Top',
+              builder: (_) => HorizontalListTabPage(),
+            ),
+            _listTile(
+              context: context,
               text: 'Layout Section Page',
               builder: (_) => LayoutSectionPage(),
+            ),
+            _listTile(
+              context: context,
+              text: 'Friendly Chat',
+              builder: (_) => FriendlyChatPage(),
             ),
             _listTile(
               context: context,
@@ -118,11 +130,6 @@ class _HomePageState extends State<HomePage> {
               text: 'TabView',
               builder: (_) => TabViewPage(),
             ),
-            // _listTile(
-            //   context: context,
-            //   text: 'Basic Animation',
-            //   builder: (_) => BasicAnimationPage(),
-            // ),
           ],
         ),
       ),

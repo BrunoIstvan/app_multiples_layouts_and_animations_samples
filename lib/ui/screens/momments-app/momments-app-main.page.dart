@@ -20,7 +20,16 @@ class _MommentsAppMainPageState extends State<MommentsAppMainPage> {
 
   @override
   void initState() {
-    _defaultHome = MommentsAppLoginPage(_model);
+    _defaultHome = Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Color(0xFFF9F9F9),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: MommentsAppLoginPage(_model),
+    );
     super.initState();
   }
 
