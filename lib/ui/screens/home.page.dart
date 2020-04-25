@@ -7,6 +7,7 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/cuisine/cuisine.p
 import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboard.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/login-sample/login-sample.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/momments-app-main.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/tabview/tabview.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
@@ -66,6 +67,11 @@ class _HomePageState extends State<HomePage> {
               context: context,
               text: 'Contactly Top',
               builder: (_) => ContactlyLoginPage(),
+            ),
+            _listTile(
+              context: context,
+              text: 'Momments Top',
+              builder: (_) => MommentsAppMainPage(),
             ),
             _listTile(
               context: context,
