@@ -51,6 +51,16 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget _listTile({String text, WidgetBuilder builder}) => ListTile(
+          title: Text(text),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: builder),
+            );
+          },
+        );
+
     return Scaffold(
       key: _scaffoldState,
       appBar: AppBar(title: Text('Flutter Demo')),
@@ -65,102 +75,82 @@ class _HomePageState extends State<HomePage> {
             // SizedBox(height: 30),
             //
             _listTile(
-              context: context,
               text: 'Cuisine Top',
               builder: (_) => CuisinePage(),
             ),
             _listTile(
-              context: context,
               text: 'Login 1 Top',
               builder: (_) => LoginSamplePage(),
             ),
             _listTile(
-              context: context,
               text: 'Animations Top',
               builder: (_) => AnimationSamplePage(),
             ),
             _listTile(
-              context: context,
               text: 'Contactly Top',
               builder: (_) => ContactlyLoginPage(),
             ),
             _listTile(
-              context: context,
               text: 'Momments Top',
               builder: (_) => MommentsAppMainPage(),
             ),
             _listTile(
-              context: context,
               text: 'Horizontal List Top',
               builder: (_) => HorizontalListTabPage(),
             ),
             _listTile(
-              context: context,
               text: 'VideoPlayer',
               builder: (_) => VideoPlayerPage(),
             ),
             _listTile(
-              context: context,
               text: 'AudioPlayer',
               builder: (_) => AudioPlayerPage(),
             ),
             _listTile(
-              context: context,
               text: 'Layout Section Page',
               builder: (_) => LayoutSectionPage(),
             ),
             _listTile(
-              context: context,
               text: 'Refresh List',
               builder: (_) => RefreshListPage(),
             ),
             _listTile(
-              context: context,
               text: 'Friendly Chat',
               builder: (_) => FriendlyChatPage(),
             ),
             _listTile(
-              context: context,
               text: 'Custom Theme',
               builder: (_) => CustomThemeHomePage(themeKey: MyThemeKeys.LIGHT),
             ),
             _listTile(
-              context: context,
               text: 'Texty Navigator',
               builder: (_) => TextyNavigationPage(),
             ),
             _listTile(
-              context: context,
               text: 'Succesful Purchase',
               builder: (_) => SuccesfulPurchasePage(),
             ),
             _listTile(
-              context: context,
               text: 'Crypto Wallet',
               builder: (_) => CryptoWalletPage(),
             ),
             _listTile(
-              context: context,
               text: 'Bank Account',
               builder: (_) => BankAccountPage(),
             ),
             _listTile(
-              context: context,
               text: 'Walkthrough',
               builder: (_) => WelcomePage(),
             ),
             _listTile(
-              context: context,
               text: 'Dashboard',
               builder: (_) => DashboardPage(),
             ),
             _listTile(
-              context: context,
               text: 'Beautiful List',
               builder: (_) => BeautifulListPage(title: 'Lessons'),
             ),
             _listTile(
-              context: context,
               text: 'TabView',
               builder: (_) => TabViewPage(),
             ),
@@ -168,10 +158,18 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       persistentFooterButtons: <Widget>[
-        new IconButton(icon: new Icon(Icons.timer), onPressed: _showBottom),
-        new IconButton(icon: new Icon(Icons.people), onPressed: () => _showBar),
         new IconButton(
-            icon: new Icon(Icons.map), onPressed: () => print('Button3')),
+          icon: new Icon(Icons.timer),
+          onPressed: _showBottom,
+        ),
+        new IconButton(
+          icon: new Icon(Icons.people),
+          onPressed: () => _showBar,
+        ),
+        new IconButton(
+          icon: new Icon(Icons.map),
+          onPressed: () => print('Button3'),
+        ),
       ],
     );
   }
@@ -234,16 +232,4 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       );
-}
-
-Widget _listTile({BuildContext context, String text, WidgetBuilder builder}) {
-  return ListTile(
-    title: Text(text),
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: builder),
-      );
-    },
-  );
 }
