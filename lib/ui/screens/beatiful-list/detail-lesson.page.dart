@@ -119,7 +119,7 @@ class _DetailLessonPageState extends State<DetailLessonPage> {
             height: MediaQuery.of(context).size.height * 0.5,
             decoration: new BoxDecoration(
               image: new DecorationImage(
-                image: new AssetImage("drive-steering-wheel.jpg"),
+                image: new AssetImage("assets/images/drive-steering-wheel.jpg"),
                 fit: BoxFit.cover,
               ),
             ),

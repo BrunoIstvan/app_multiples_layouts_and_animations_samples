@@ -290,7 +290,7 @@ class _LoginSamplePageState extends State<LoginSamplePage> {
     return Container(
       height: screenHeight / 2,
       child: Image.asset(
-        'assets/house.jpg',
+        'assets/images/house.jpg',
         fit: BoxFit.cover,
       ),
     );

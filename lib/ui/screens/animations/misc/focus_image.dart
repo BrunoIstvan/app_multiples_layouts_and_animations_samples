@@ -9,7 +9,13 @@ class FocusImageDemo extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('FocusImageDemo')),
+      appBar: AppBar(
+        title: Text('Focus Image Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
       body: Grid(),
     );
   }
@@ -24,8 +30,8 @@ class Grid extends StatelessWidget {
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
         itemBuilder: (context, index) {
           return (index >= 20)
-              ? SmallCard('assets/eat_cape_town_sm.jpg')
-              : SmallCard('assets/eat_new_orleans_sm.jpg');
+              ? SmallCard('assets/images/eat_cape_town_sm.jpg')
+              : SmallCard('assets/images/eat_new_orleans_sm.jpg');
         },
       ),
     );

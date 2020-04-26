@@ -42,7 +42,11 @@ class _CustomTweenDemoState extends State<CustomTweenDemo>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CustomTweenDemo'),
+        title: Text('Custom Tween Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
         actions: [
           MaterialButton(
             child: Text(

@@ -1,4 +1,4 @@
-import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-home.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/animations-part-two/animations-part-two-home.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/animations/animation-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/audioplayer/audioplayer.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/bank-account/bank-account.page.dart';
@@ -233,7 +233,7 @@ class _HomePageState extends State<HomePage> {
         decoration: new BoxDecoration(
           image: new DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage("background_header.jpg"),
+            image: AssetImage("assets/images/background_header.jpg"),
           ),
         ),
       );

@@ -11,7 +11,11 @@ class ExpandCardDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ExpandCardDemo'),
+        title: Text('Expand Card Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         child: ExpandCard(),
@@ -75,11 +79,11 @@ class _ExpandCardState extends State<ExpandCard>
                 );
               },
               firstChild: Image.asset(
-                'assets/eat_cape_town_sm.jpg',
+                'assets/images/eat_cape_town_sm.jpg',
                 fit: BoxFit.cover,
               ),
               secondChild: Image.asset(
-                'assets/eat_new_orleans_sm.jpg',
+                'assets/images/eat_new_orleans_sm.jpg',
                 fit: BoxFit.cover,
               ),
             ),

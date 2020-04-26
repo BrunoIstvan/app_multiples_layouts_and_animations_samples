@@ -1,8 +1,8 @@
-import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-sample-1.page.dart';
-import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-sample-2.page.dart';
-import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-sample-3.page.dart';
-import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-sample-4.page.dart';
-import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-sample-5.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/animations-part-two/animations-part-two-sample-1.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/animations-part-two/animations-part-two-sample-2.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/animations-part-two/animations-part-two-sample-3.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/animations-part-two/animations-part-two-sample-4.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/animations-part-two/animations-part-two-sample-5.page.dart';
 import 'package:flutter/material.dart';
 
 class AnimationsParte2HomePage extends StatelessWidget {

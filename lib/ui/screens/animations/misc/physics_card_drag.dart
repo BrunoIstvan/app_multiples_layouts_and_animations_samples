@@ -12,7 +12,11 @@ class PhysicsCardDragDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('PhysicsCardDragDemo'),
+        title: Text('Physics Card Drag Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: DraggableCard(
         child: FlutterLogo(

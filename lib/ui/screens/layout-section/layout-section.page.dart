@@ -26,7 +26,7 @@ class LayoutSectionPage extends StatelessWidget {
 }
 
 Widget _imageSection = Image.asset(
-  'images/lake.jpg',
+  'assets/images/lake.jpg',
   width: 600,
   height: 240,
   fit: BoxFit.cover,

@@ -151,7 +151,7 @@ class _SuccesfulPurchasePageState extends State<SuccesfulPurchasePage> {
 
   Widget _buildBulbImage(Size size) => Center(
         child: Image.asset(
-          'assets/success-bulb.png',
+          'assets/images/success-bulb.png',
           width: size.width * .30,
           fit: BoxFit.fill,
         ),

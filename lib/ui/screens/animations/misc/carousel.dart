@@ -10,9 +10,9 @@ class CarouselDemo extends StatelessWidget {
   static String routeName = '/misc/carousel';
 
   static const List<String> fileNames = [
-    'assets/eat_cape_town_sm.jpg',
-    'assets/eat_new_orleans_sm.jpg',
-    'assets/eat_sydney_sm.jpg',
+    'assets/images/eat_cape_town_sm.jpg',
+    'assets/images/eat_new_orleans_sm.jpg',
+    'assets/images/eat_sydney_sm.jpg',
   ];
 
   final List<Widget> images =
@@ -22,7 +22,11 @@ class CarouselDemo extends StatelessWidget {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CarouselDemo'),
+        title: Text('Carousel Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         child: Padding(

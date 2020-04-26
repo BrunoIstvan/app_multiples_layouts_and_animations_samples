@@ -8,11 +8,11 @@ import 'package:page_transition/page_transition.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 final List<String> imgList = [
-  'assets/pic1.jpg',
-  'assets/pic2.jpg',
-  'assets/pic3.jpg',
-  'assets/pic4.jpg',
-  'assets/pic5.jpg'
+  'assets/images/pic1.jpg',
+  'assets/images/pic2.jpg',
+  'assets/images/pic3.jpg',
+  'assets/images/pic4.jpg',
+  'assets/images/pic5.jpg'
 ];
 
 class MommentsAppHomePage extends StatefulWidget {
@@ -129,7 +129,14 @@ class _MommentsAppHomePageState extends State<MommentsAppHomePage> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(30.0), // here the desired height
-        child: AppBar(backgroundColor: kPlatinum, elevation: 0.0),
+        child: AppBar(
+          backgroundColor: kPlatinum,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ),
       ),
       backgroundColor: kPlatinum,
       body: Column(

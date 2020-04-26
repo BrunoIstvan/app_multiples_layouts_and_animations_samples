@@ -10,7 +10,11 @@ class PageRouteBuilderDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('PageRouteBuilderDemo'),
+        title: Text('Page Route Builder Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         child: RaisedButton(

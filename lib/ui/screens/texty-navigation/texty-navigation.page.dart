@@ -48,7 +48,7 @@ Widget _makeProfileAvatar() {
       // SizedBox(height: 10.0),
       CircleAvatar(
         radius: 60.0,
-        backgroundImage: AssetImage('assets/avatar.jpg'),
+        backgroundImage: AssetImage('assets/images/avatar.jpg'),
       ),
       SizedBox(height: 20.0),
       Center(

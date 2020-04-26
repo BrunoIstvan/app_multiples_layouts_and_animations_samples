@@ -23,9 +23,9 @@ class _MommentsAppFormMenuPageState extends State<MommentsAppFormMenuPage> {
 
   List<Widget> _buildMenuItems(MainModel model) {
     final List<String> images = [
-      'assets/menu_form.png',
-      'assets/menu_list.png',
-      'assets/menu_richList.png'
+      'assets/images/menu_form.png',
+      'assets/images/menu_list.png',
+      'assets/images/menu_richList.png'
     ];
 
     final List<String> menuTitles = ['Form', 'List', 'RichList'];
@@ -140,6 +140,10 @@ class _MommentsAppFormMenuPageState extends State<MommentsAppFormMenuPage> {
       title: Text('Menu', style: Theme.of(context).textTheme.headline5),
       backgroundColor: Colors.white,
       elevation: 0.0,
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        onPressed: () => Navigator.pop(context),
+      ),
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.exit_to_app),

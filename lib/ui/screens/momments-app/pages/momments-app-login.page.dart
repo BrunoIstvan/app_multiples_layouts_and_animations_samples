@@ -152,7 +152,7 @@ class _MommentsAppLoginPageState extends State<MommentsAppLoginPage> {
             Column(
               children: <Widget>[
                 Image.asset(
-                  'assets/LOGO.png',
+                  'assets/images/LOGO.png',
                   height: 150.0,
                 ),
                 SizedBox(height: 12.0),

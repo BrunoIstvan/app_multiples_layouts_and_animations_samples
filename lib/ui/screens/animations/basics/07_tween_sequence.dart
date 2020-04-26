@@ -58,7 +58,11 @@ class _TweenSequenceDemoState extends State<TweenSequenceDemo>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TweenSequenceDemo'),
+        title: Text('Tween Sequence Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         child: AnimatedBuilder(

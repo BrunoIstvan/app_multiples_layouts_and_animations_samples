@@ -34,7 +34,11 @@ class _AnimatedBuilderDemoState extends State<AnimatedBuilderDemo>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimatedBuilderDemo'),
+        title: Text('Animated Builder Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         // AnimatedBuilder handles listening to a given animation and calling the builder

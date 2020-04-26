@@ -11,7 +11,7 @@ const pinCodeHintText = "Pin Code";
 const loginButtonText = "Login";
 
 // Images
-Image appLogo = Image.asset('flutter-logo-round.png');
+Image appLogo = Image.asset('assets/images/flutter-logo-round.png');
 
 // Sizes
 const bigRadius = 66.0;

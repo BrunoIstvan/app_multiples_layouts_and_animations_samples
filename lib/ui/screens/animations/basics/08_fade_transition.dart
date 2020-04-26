@@ -45,8 +45,10 @@ class _FadeTransitionDemoState extends State<FadeTransitionDemo>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'FadeTransitionDemo',
+        title: Text('Fade Transition Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
         ),
       ),
       body: Center(

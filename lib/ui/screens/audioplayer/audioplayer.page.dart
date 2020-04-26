@@ -204,7 +204,7 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
 
   void _play() async {
     if (_state == AudioPlayerState.STOPPED) {
-      AudioPlayer result = await _audioCache.play('audio.mp3');
+      AudioPlayer result = await _audioCache.play('audios/audio.mp3');
       if (result.state == AudioPlayerState.PLAYING) {
         setState(() {
           _state = AudioPlayerState.PLAYING;

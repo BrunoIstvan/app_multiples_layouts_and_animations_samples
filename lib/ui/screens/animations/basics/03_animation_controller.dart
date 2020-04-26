@@ -54,7 +54,11 @@ class _AnimationControllerDemoState extends State<AnimationControllerDemo>
     // has completed.
     return Scaffold(
       appBar: AppBar(
-        title: Text('AnimationControllerDemo'),
+        title: Text('Animation Controller Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         child: Column(

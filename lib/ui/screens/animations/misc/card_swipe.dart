@@ -24,16 +24,20 @@ class _CardSwipeDemoState extends State<CardSwipeDemo> {
 
   void _resetCards() {
     fileNames = [
-      'assets/eat_cape_town_sm.jpg',
-      'assets/eat_new_orleans_sm.jpg',
-      'assets/eat_sydney_sm.jpg',
+      'assets/images/eat_cape_town_sm.jpg',
+      'assets/images/eat_new_orleans_sm.jpg',
+      'assets/images/eat_sydney_sm.jpg',
     ];
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CardSwipeDemo'),
+        title: Text('Card Swipe Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),

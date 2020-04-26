@@ -11,7 +11,11 @@ class HeroAnimationDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HeroAnimationDemo'),
+        title: Text('Hero Animation Demo'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: GestureDetector(
         child: Hero(
@@ -34,7 +38,11 @@ class HeroPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlue,
       appBar: AppBar(
-        title: Text('HeroAnimationDemo Page 2'),
+        title: Text('Hero Animation Demo Page 2'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: Center(
         child: Hero(
