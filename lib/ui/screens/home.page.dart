@@ -1,4 +1,5 @@
 import 'package:app_multiple_layouts_and_animations/ui/screens/animations/animation-sample.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/audioplayer/audioplayer.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/bank-account/bank-account.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/beatiful-list/beautiful-list.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/contactly-app/contactly-login.page.dart';
@@ -16,6 +17,7 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/tabview/tabview.p
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/themes/custom-theme-home.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/themes/themes.const.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/videoplayer/videoplayer.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/walkthrougth/welcome.page.dart';
 import 'package:flutter/material.dart';
 
@@ -91,6 +93,16 @@ class _HomePageState extends State<HomePage> {
               context: context,
               text: 'Horizontal List Top',
               builder: (_) => HorizontalListTabPage(),
+            ),
+            _listTile(
+              context: context,
+              text: 'VideoPlayer',
+              builder: (_) => VideoPlayerPage(),
+            ),
+            _listTile(
+              context: context,
+              text: 'AudioPlayer',
+              builder: (_) => AudioPlayerPage(),
             ),
             _listTile(
               context: context,

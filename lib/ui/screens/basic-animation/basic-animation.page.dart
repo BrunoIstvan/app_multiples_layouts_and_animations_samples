@@ -42,34 +42,42 @@ class _BasicAnimationPageState extends State<BasicAnimationPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Basic Animation'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
+      appBar: _buildAppBar(context),
+      body: _buildBody(),
+    );
+  }
+
+  Column _buildBody() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        new Container(
+          color: Colors.white,
+          height: 3.0,
+          width: animation.value * 100.0, //animation.value ranges from 0 to 1
         ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          new Container(
-            color: Colors.white,
-            height: 3.0,
-            width: animation.value * 100.0, //animation.value ranges from 0 to 1
-          ),
-          new Padding(padding: new EdgeInsets.only(bottom: 5.0)),
-          new Container(
-            color: Colors.white,
-            height: 3.0,
-            width: animation.value * 75.0, //animation.value ranges from 0 to 1
-          ),
-          new Padding(padding: new EdgeInsets.only(bottom: 5.0)),
-          new Container(
-            color: Colors.white,
-            height: 3.0,
-            width: animation.value * 50.0, //animation.value ranges from 0 to 1
-          ),
-        ],
+        new Padding(padding: new EdgeInsets.only(bottom: 5.0)),
+        new Container(
+          color: Colors.white,
+          height: 3.0,
+          width: animation.value * 75.0, //animation.value ranges from 0 to 1
+        ),
+        new Padding(padding: new EdgeInsets.only(bottom: 5.0)),
+        new Container(
+          color: Colors.white,
+          height: 3.0,
+          width: animation.value * 50.0, //animation.value ranges from 0 to 1
+        ),
+      ],
+    );
+  }
+
+  AppBar _buildAppBar(BuildContext context) {
+    return AppBar(
+      title: Text('Basic Animation'),
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        onPressed: () => Navigator.pop(context),
       ),
     );
   }
