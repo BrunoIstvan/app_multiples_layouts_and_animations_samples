@@ -23,20 +23,28 @@ class AnimationSamplePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final headerStyle = Theme.of(context).textTheme.headline6;
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Animation Samples"),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
-      body: ListView(
-        children: [
-          ListTile(title: Text('Basics', style: headerStyle)),
-          ...basicDemos.map((d) => DemoTile(d)),
-          ListTile(title: Text('Misc', style: headerStyle)),
-          ...miscDemos.map((d) => DemoTile(d)),
-        ],
+      appBar: _buildAppBar(context),
+      body: _buildListView(headerStyle),
+    );
+  }
+
+  ListView _buildListView(TextStyle headerStyle) {
+    return ListView(
+      children: [
+        ListTile(title: Text('Basics', style: headerStyle)),
+        ...basicDemos.map((d) => DemoTile(d)),
+        ListTile(title: Text('Misc', style: headerStyle)),
+        ...miscDemos.map((d) => DemoTile(d)),
+      ],
+    );
+  }
+
+  AppBar _buildAppBar(BuildContext context) {
+    return AppBar(
+      title: Text("Animation Samples"),
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        onPressed: () => Navigator.pop(context),
       ),
     );
   }

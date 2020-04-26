@@ -1,3 +1,4 @@
+import 'package:app_multiple_layouts_and_animations/ui/screens/aimations-part-two/animations-part-two-home.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/animations/animation-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/audioplayer/audioplayer.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/bank-account/bank-account.page.dart';
@@ -85,6 +86,10 @@ class _HomePageState extends State<HomePage> {
             _listTile(
               text: 'Animations Top',
               builder: (_) => AnimationSamplePage(),
+            ),
+            _listTile(
+              text: 'Animations 2 Top',
+              builder: (_) => AnimationsParte2HomePage(),
             ),
             _listTile(
               text: 'Contactly Top',
