@@ -79,9 +79,7 @@ class _BeautifulListPageState extends State<BeautifulListPage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DetailLessonPage(
-                lesson: lesson,
-              ),
+              builder: (context) => DetailLessonPage(lesson: lesson),
             ),
           );
         },

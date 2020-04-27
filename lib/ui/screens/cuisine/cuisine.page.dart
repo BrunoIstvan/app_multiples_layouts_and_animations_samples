@@ -128,11 +128,7 @@ class _CuisinePageState extends State<CuisinePage> {
         onPressed: () => Navigator.push(
           ct,
           MaterialPageRoute(
-            builder: (cx) => CookPage(
-              fi['in'],
-              fi['pf'],
-              fi['fn'],
-            ),
+            builder: (cx) => CookPage(fi['in'], fi['pf'], fi['fn']),
           ),
         ),
       ),

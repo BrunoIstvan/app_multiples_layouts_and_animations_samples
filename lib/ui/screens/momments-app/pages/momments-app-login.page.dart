@@ -109,9 +109,7 @@ class _MommentsAppLoginPageState extends State<MommentsAppLoginPage> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) {
-            return MommentsAppHomePage();
-          },
+          builder: (_) => MommentsAppHomePage(),
         ),
       );
 

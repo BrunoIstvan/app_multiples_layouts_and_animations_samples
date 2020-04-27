@@ -76,9 +76,7 @@ class ContactlyLoginPage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) {
-                  return ContactlyHomePage();
-                },
+                builder: (_) => ContactlyHomePage(),
               ),
             );
           },

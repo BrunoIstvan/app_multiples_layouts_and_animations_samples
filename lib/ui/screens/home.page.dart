@@ -8,11 +8,14 @@ import 'package:app_multiple_layouts_and_animations/ui/screens/crypto-wallet/cry
 import 'package:app_multiple_layouts_and_animations/ui/screens/cuisine/cuisine.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/dashboard/dashboard.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/friendly-chat/friendly-chat.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/furniture/furniture-detail.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/furniture/furniture-profile.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/horizontal-list-tab/horizontal-list-tab.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/layout-section/layout-section.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/list-refresh/refresh-list.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/login-sample/login-sample.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/momments-app/momments-app-main.page.dart';
+import 'package:app_multiple_layouts_and_animations/ui/screens/profiles/profiles-home.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/succesful-purchase/succesful-purchase.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/tabview/tabview.page.dart';
 import 'package:app_multiple_layouts_and_animations/ui/screens/texty-navigation/texty-navigation.page.dart';
@@ -102,6 +105,18 @@ class _HomePageState extends State<HomePage> {
             _listTile(
               text: 'Horizontal List Top',
               builder: (_) => HorizontalListTabPage(),
+            ),
+            _listTile(
+              text: 'Profiles Top',
+              builder: (_) => ProfileHomePage(),
+            ),
+            _listTile(
+              text: 'Forniture Profile Top',
+              builder: (_) => FurnitureProfilePage(),
+            ),
+            _listTile(
+              text: 'Forniture Detail Top',
+              builder: (_) => FurnitureDetailPage(),
             ),
             _listTile(
               text: 'VideoPlayer',

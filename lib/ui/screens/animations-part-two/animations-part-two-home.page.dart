@@ -27,9 +27,7 @@ class AnimationsParte2HomePage extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) {
-                    return AnimationPart2Sample1Page();
-                  },
+                  builder: (_) => AnimationPart2Sample1Page(),
                 ),
               ),
               child: Text("1. Show Hide on Click"),
@@ -41,9 +39,7 @@ class AnimationsParte2HomePage extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) {
-                    return AnimationPart2Sample2Page();
-                  },
+                  builder: (_) => AnimationPart2Sample2Page(),
                 ),
               ),
               child: Text("2. Reveal animation"),
@@ -55,9 +51,7 @@ class AnimationsParte2HomePage extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) {
-                    return AnimationPart2Sample3Page();
-                  },
+                  builder: (_) => AnimationPart2Sample3Page(),
                 ),
               ),
               child: Text("3. Animated widget"),
@@ -69,9 +63,7 @@ class AnimationsParte2HomePage extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) {
-                    return AnimationPart2Sample4Page();
-                  },
+                  builder: (_) => AnimationPart2Sample4Page(),
                 ),
               ),
               child: Text("4. Animated builder"),
@@ -83,9 +75,7 @@ class AnimationsParte2HomePage extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) {
-                    return AnimationPart2Sample5Page();
-                  },
+                  builder: (_) => AnimationPart2Sample5Page(),
                 ),
               ),
               child: Text("5. Animated bottom bar"),

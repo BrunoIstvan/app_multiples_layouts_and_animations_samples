@@ -152,9 +152,7 @@ class _MommentsAppFormMenuPageState extends State<MommentsAppFormMenuPage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) {
-                  return MommentsAppLoginPage(_model);
-                },
+                builder: (_) => MommentsAppLoginPage(_model),
               ),
             );
           },
